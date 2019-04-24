@@ -9,11 +9,12 @@ public class KinectTestController : MonoBehaviour
     private void Start()
     {
         myKinectManager =KinectManager.Instance;
+        GetKinectStatus();
     }
 
     private void Update()
     {
-        GetKinectStatus();
+        //GetKinectStatus();
     }
     
     private void GetKinectStatus()
