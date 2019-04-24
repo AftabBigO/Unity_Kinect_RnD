@@ -464,14 +464,14 @@ MonoBehaviour:
   autoChangeAlfterDelay: 0
   slideChangeAfterDelay: 10
   slideTextures:
-  - {fileID: 2800000, guid: 6327f085d7db9b848a1daa637b9f21b0, type: 3}
-  - {fileID: 2800000, guid: 0f32f02b55f3c7241abcb9aeedde6f24, type: 3}
-  - {fileID: 2800000, guid: a057152bf77488743b0765f46f02f65d, type: 3}
-  - {fileID: 2800000, guid: be98e1a87b64b75478540bc7ce79253c, type: 3}
-  - {fileID: 2800000, guid: 7f98d9613bcb9b94f9f28d4abc2c3fba, type: 3}
-  - {fileID: 2800000, guid: 8eb58467e92ba324aa30702e30a44ea1, type: 3}
-  - {fileID: 2800000, guid: fc977d5fe018c5f47a98a72ce8c86b7e, type: 3}
-  - {fileID: 2800000, guid: 3b4a8c9197e6195479531ab76ced8b52, type: 3}
+  - {fileID: 2800000, guid: 9405d5efdd20fb046b7bfb1481f679f3, type: 3}
+  - {fileID: 2800000, guid: e1fe43d802eb23f45acd357ac2abd2ed, type: 3}
+  - {fileID: 2800000, guid: d319c8787db6b784aa93b917c4f18bd6, type: 3}
+  - {fileID: 2800000, guid: 7fa4e77f0708b8f47a98b800dca2756d, type: 3}
+  - {fileID: 2800000, guid: 9ca5071c85a385a44b95f37cf7a18580, type: 3}
+  - {fileID: 2800000, guid: 20d63acb73e3a624a8ae5ce9b9f02e30, type: 3}
+  - {fileID: 2800000, guid: 75c6380ac98dc1d428412bc895df1752, type: 3}
+  - {fileID: 2800000, guid: 7d916b96adfffb34bb89c5aa3f2220e1, type: 3}
   - {fileID: 2800000, guid: 1a98325e20ed42e4b9b78066d276bc44, type: 3}
   - {fileID: 2800000, guid: 50f58933abddf7d4d922a9045bedc772, type: 3}
   horizontalSides:
@@ -738,7 +738,7 @@ MonoBehaviour:
   UseSelfIntersectionConstraint: 0
   Player1Avatars: []
   Player2Avatars: []
-  Player1CalibrationPose: 0
+  Player1CalibrationPose: 1
   Player2CalibrationPose: 0
   Player1Gestures: 
   Player2Gestures: 

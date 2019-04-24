@@ -1,20 +1,24 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class KinectTestController : MonoBehaviour
 {
     [SerializeField] private Text kinectTestText;
-    KinectWrapper.NuiSkeletonData kinectNuiSkalatonData;
     KinectManager myKinectManager;
+    bool isKinectInitialized;
     private void Start()
     {
-        myKinectManager = new KinectManager();
+        myKinectManager =KinectManager.Instance;
     }
 
     private void Update()
-    { 
-
+    {
+        GetKinectStatus();
+    }
+    
+    private void GetKinectStatus()
+    {
+        isKinectInitialized = myKinectManager.IsInitialized();
+        kinectTestText.text = isKinectInitialized.ToString();
     }
 }
