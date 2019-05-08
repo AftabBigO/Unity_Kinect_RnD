@@ -1,5 +1,4 @@
 using UnityEngine;
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,12 +6,11 @@ using System.Runtime.InteropServices;
 using System.IO;
 using System.Text;
 
-
 public class KinectManager : MonoBehaviour
 {
+    
 	public enum Smoothing : int { None, Default, Medium, Aggressive }
-	
-	
+		
 	// Public Bool to determine how many players there are. Default of one user.
 	public bool TwoUsers = false;
 	
@@ -98,7 +96,6 @@ public class KinectManager : MonoBehaviour
 	// GUI Text to show gesture debug message.
 	public GUIText GesturesDebugText;
 	
-
 	// Bool to keep track of whether Kinect has been initialized
 	private bool KinectInitialized = false; 
 	
@@ -273,11 +270,15 @@ public class KinectManager : MonoBehaviour
     { 
 		return usersClrTex;
 	}
-	
-	// returns true if at least one user is currently detected by the sensor
-	public bool IsUserDetected()
+
+    // returns true if at least one user is currently detected by the sensor
+
+    ///<summary>
+    ///This is a testing summary by Aftab
+    ///</summary>
+    public bool IsUserDetected()
 	{
-		return KinectInitialized && (allUsers.Count > 0);
+        return KinectInitialized && (allUsers.Count > 0);
 	}
 	
 	// returns the UserID of Player1, or 0 if no Player1 is detected
@@ -316,7 +317,7 @@ public class KinectManager : MonoBehaviour
 	}
 	
 	// returns the raw unmodified joint position, as returned by the Kinect sensor
-	public Vector3 GetRawSkeletonJointPos(uint UserId, int joint)
+	public Vector3 GetRawSkeletonJointPos( uint UserId, int joint)
 	{
 		if(UserId == Player1ID)
 			return joint >= 0 && joint < player1JointsPos.Length ? (Vector3)skeletonFrame.SkeletonData[player1Index].SkeletonPositions[joint] : Vector3.zero;

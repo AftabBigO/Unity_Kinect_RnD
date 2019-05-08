@@ -3,7 +3,7 @@ using System.Collections;
 
 public class EggSpawner : MonoBehaviour 
 {
-    public Transform eggPrefab;
+    public Transform[] eggPrefab;
 
     private float nextEggTime = 0.0f;
     private float spawnRate = 1.5f;
@@ -23,15 +23,16 @@ public class EggSpawner : MonoBehaviour
     {
 		KinectManager manager = KinectManager.Instance;
 
-		if(eggPrefab && manager && manager.IsInitialized() && manager.IsUserDetected())
+		if(eggPrefab.Length!=0 && manager && manager.IsInitialized() && manager.IsUserDetected())
 		{
 			uint userId = manager.GetPlayer1ID();
 			Vector3 posUser = manager.GetUserPosition(userId);
 
 			float addXPos = Random.Range(-10f, 10f);
 			Vector3 spawnPos = new Vector3(addXPos, 10f, posUser.z);
-			
-			Transform eggTransform = Instantiate(eggPrefab, spawnPos, Quaternion.identity) as Transform;
+            Transform objectToSpawn = eggPrefab[Random.Range(0, 4)];
+
+            Transform eggTransform = Instantiate(objectToSpawn, spawnPos, Quaternion.identity) as Transform;
 			eggTransform.parent = transform;
 		}
     }

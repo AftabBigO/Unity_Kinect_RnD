@@ -96,12 +96,12 @@ public class DepthImageViewer : MonoBehaviour
 
 	}
 
-	void OnGUI()
-	{
-		if(foregroundTex)
-		{
-			GUI.DrawTexture(foregroundRect, foregroundTex);
-		}
-	}
+    void OnGUI()
+    {
+        if (foregroundTex)
+        {
+            GUI.DrawTexture(foregroundRect, foregroundTex);
+        }
+    }
 
 }
